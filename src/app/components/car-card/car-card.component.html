@@ -1,0 +1,6 @@
+<a *ngIf="car" class="card" [routerLink]="['/cars', car.id]">
+  <span>{{car.model}}</span>
+  <b>{{car.producer}}</b>
+  <span>{{car.production_year}}, Price: ${{car.price}}</span>
+  <button (click)="addToCart(car)">Add</button>
+</a>

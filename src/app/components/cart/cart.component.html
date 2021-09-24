@@ -1,0 +1,12 @@
+<h3>Cart Cars</h3>
+
+<div class="container">
+  <div *ngFor="let cart of items" class="cart-container">
+    <h2>{{ cart.producer }} - {{ cart.model }}</h2>
+    <p>Rocznik {{ cart.production_year }}</p>
+    <p>{{ cart.price | currency }}</p>
+    <button (click)="onDeleteItem(cart)">X</button>
+  </div>
+  
+  <button [disabled]="!items.length" (click)="onDelete()">Delete</button>
+</div>
